@@ -1,0 +1,15 @@
+<div>
+	<mat-form-field> <mat-label>Filter</mat-label> <input
+		matInput (keyup)="applyFilter($event)"> </mat-form-field>
+	<table mat-table [dataSource]="dataSource" matSort>
+		<ng-container matColumnDef="{{column}}" *ngFor="let column of columnsToDisplay">
+		<th mat-header-cell *matHeaderCellDef mat-sort-header>{{column}}</th>
+		<td mat-cell *matCellDef="let element">
+			<input #input matInput placeholder="{{column}}" [(value)]="element[column]" /></td>
+		</ng-container>
+  		<tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+		<tr mat-row *matRowDef="let element; columns: columnsToDisplay;" >
+		</tr>
+	</table>
+	<mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>
