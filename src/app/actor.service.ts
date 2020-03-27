@@ -8,7 +8,7 @@ import { catchError, tap } from 'rxjs/operators';
 	providedIn: 'root'
 })
 export class ActorService {
-	private allActorURL = 'http://localhost:8080/actor/all'
+	private allActorURL = 'http://localhost:8080/api/actor/all'
 
 	constructor(private http: HttpClient) { }
 

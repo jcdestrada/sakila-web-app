@@ -44,3 +44,12 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+.editorconfig
+/build/*
+/bin/*
+/gradle/*
+.gradle/*
+.settings/
+.classpath
+.project
+gradle*
